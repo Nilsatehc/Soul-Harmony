@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #664c4c#1c5977;
+}
+form button{
+    padding: 8px 20px;
+    width: 200px;
+    height: 50px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    border-radius: 0px;
+    text-transform: uppercase;
+    margin: 25px;
+    overflow: hidden;
+    position: relative;
+}
+form button::before{
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, #706bd4, transparent);
+    transform: translateX(-100%);
+    transition:0.6s;
+    position: absolute;
+}
+form button:hover{
+    background: transparent;
+    box-shadow: 0 0 20px 5px #484489;
+
+}
+
+header {
+    background-image: url('img/Escola\ Musical\ \(3\).png');
+    background-size: cover; 
+    color: #484489;
+    text-align: center;
+    padding: 20px 0;
+    
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideIn 1.5s forwards; 
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    opacity: 0;
+    transform: scale(0.5); 
+    animation: fadeInZoom 2s forwards; 
+}
+
+@keyframes fadeInZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); 
+    }
+}
+
+header h1 {
+    font-size: 3rem;
+    
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color:#484489;
+    font-size: 1.2rem;
+}
+#minhaImagem {
+    position: absolute;
+    left: 0;
+    transition: transform 2s ease;
+}
+
+section {
+    padding: 30px;
+    margin: 20px;
+    background-color: #8e8ca8;
+    border-radius: 8px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.curso {
+    background-color: #fafafa;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.depoimento {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-style: italic;
+}
+
+#contato ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#contato ul li {
+    margin: 10px 0;
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/*form button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+form button:hover {
+    background-color: #555;
+}*/
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+footer p {
+    font-size: 1rem;
+}
